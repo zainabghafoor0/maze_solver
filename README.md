@@ -38,19 +38,48 @@ The data structures used are simple arrays (`std::vector`) and singly linked lis
 ## Testing & Status
 The program was compiled with:  
 ```bash
-g++ -std=c++20 *.cpp -o a.out
-./a.out
+g++ -o maze_solver maze_solver.cpp
+./maze_solver
 
 ### Results
-Unsorted Vector [N=5000] — Insert: 103us, Avg Lookup: 18248ns, Remove: 470us
-Sorted Vector [N=5000] — Insert: 86us, Avg Lookup: 259ns, Remove: 215us
-Unsorted Linked List [N=5000] — Insert: 148us, Avg Lookup: 8645ns, Remove: 4126us
-Sorted Linked List [N=5000] — Insert: 125us, Avg Lookup: 5470ns, Remove: 2160us
+Maze loaded: 13x15
+Start: (3, 0)
+Target: (11, 14)
 
-Unsorted Vector [N=500000] — Insert: 9156us, Avg Lookup: 1811830ns, Remove: 4525938us
-Sorted Vector [N=500000] — Insert: 8806us, Avg Lookup: 386ns, Remove: 763420us
-Unsorted Linked List [N=500000] — Insert: 14175us, Avg Lookup: 821579ns, Remove: 35534888us
-Sorted Linked List [N=500000] — Insert: 14151us, Avg Lookup: 718269ns, Remove: 18453638us
+Original Maze:
+█ █ █ █ █ █ █ █ █ █ █ █ █ █ █ 
+█               █           █ 
+█   █ █ █   █   █   █   █ █ █ 
+S       █   █   █   █       █ 
+█ █ █ █ █   █ █ █   █ █ █   █ 
+█                   █       █ 
+█   █   █   █ █ █   █   █ █ █ 
+█   █   █       █   █       █ 
+█   █   █ █ █   █   █ █ █   █ 
+█   █       █   █   █   █   █ 
+█   █ █ █   █ █ █   █   █   █ 
+█       █       █       █   T 
+█ █ █ █ █ █ █ █ █ █ █ █ █ █ █ 
+Path found!
+
+Maze Solution:
+# # # # # # # # # # # # # # # 
+# * * * * *     # * * *     # 
+# * # # # * #   # * # * # # # 
+S *     # * #   # * # * * * # 
+# # # # # * # # # * # # # * # 
+#         * * * * * # * * * # 
+#   #   #   # # #   # * # # # 
+#   #   #       #   # * * * # 
+#   #   # # #   #   # # # * # 
+#   #       #   #   #   # * # 
+#   # # #   # # #   #   # * # 
+#       #       #       # * T 
+# # # # # # # # # # # # # # # 
+
+Path coordinates:
+(3, 0) -> (3, 1) -> (2, 1) -> (1, 1) -> (1, 2) -> (1, 3) -> (1, 4) -> (1, 5) -> (2, 5) -> (3, 5) -> (4, 5) -> (5, 5) -> (5, 6) -> (5, 7) -> (5, 8) -> (5, 9) -> (4, 9) -> (3, 9) -> (2, 9) -> (1, 9) -> (1, 10) -> (1, 11) -> (2, 11) -> (3, 11) -> (3, 12) -> (3, 13) -> (4, 13) -> (5, 13) -> (5, 12) -> (5, 11) -> (6, 11) -> (7, 11) -> (7, 12) -> (7, 13) -> (8, 13) -> (9, 13) -> (10, 13) -> (11, 13) -> (11, 14)
+Path length: 39 steps
 
 ### Challenges
 - The results are not exactly the same as the expected ones given in the lab handout.  
