@@ -144,34 +144,6 @@ Path length: 39 steps
 
 ---
 
-## Algorithm Complexity
-
-- **Time Complexity**: O(4^(R×C)) in worst case, where R×C is the maze size
-- **Space Complexity**: O(R×C) for visited array and maximum stack depth
-- **Practical Performance**: Much better than worst case due to early termination and pruning
-
----
-
-## Challenges & Solutions
-
-### 1. **Compilation Issues**
-- **Problem**: Multi-character constant warnings with Unicode characters
-- **Solution**: Replaced Unicode block characters (`█`) with ASCII (`#`)
-
-### 2. **Missing Header Dependencies**
-- **Problem**: `std::reverse` not found
-- **Solution**: Implemented manual array reversal using `std::swap`
-
-### 3. **Start/Target Detection**
-- **Problem**: Automatically identifying start and target positions
-- **Solution**: Search for open cells on maze borders, fallback to first/last open cells
-
-### 4. **Path Visualization**
-- **Problem**: Converting stack-based path to readable format
-- **Solution**: Copy stack to vector, reverse order, and mark path on display grid
-
----
-
 ## Files Structure
 
 ```
@@ -182,17 +154,3 @@ maze_solver/
 ```
 
 ---
-
-## Future Enhancements
-
-- Support for multiple maze file formats
-- Implementation of alternative algorithms (A*, Dijkstra)
-- Interactive maze editor
-- Performance benchmarking tools
-- Support for larger maze sizes
-
----
-
-## License
-
-This project is developed for educational purposes as part of coursework.
