@@ -41,7 +41,7 @@ The program was compiled with:
 g++ -o maze_solver maze_solver.cpp
 ./maze_solver
 
-### Results
+## Results
 Maze loaded: 13x15
 Start: (3, 0)
 Target: (11, 14)
