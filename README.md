@@ -10,9 +10,8 @@
 
 - The base `Dictionary` interface and `UnsortedVectorDict` example were provided.  
 - These are the files I worked:  
-  - `SortedVectorDict.cpp / .hpp`  
-  - `UnsortedLinkedListDict.cpp / .hpp`  
-  - `SortedLinkedListDict.cpp / .hpp`  
+  - `maze_solver.cpp`  
+  - `maze0-1_input.txt`
 
 I changed and tested everything myself until it worked.  
 
