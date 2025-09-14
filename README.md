@@ -2,7 +2,7 @@
 
 **Name:** Zainab Ghafoor  
 **ID:** 008259427  
-**GitHub repository link:** [https://github.com/zainabghafoor0/dictionary_benchmark.git](https://github.com/zainabghafoor0/maze_solver.git)
+**GitHub repository link:** [https://github.com/zainabghafoor0/maze_solver.git](https://github.com/zainabghafoor0/maze_solver.git)
 
 ---
 
