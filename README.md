@@ -25,14 +25,6 @@ The program tests four dictionary implementations:
 3. **Unsorted Linked List** – insert at head, linear search for lookup.  
 4. **Sorted Linked List** – bulk insert at head, then sort once, linear traversal for lookup.  
 
-### Files I changed
-- `SortedVectorDict.cpp/.hpp` → added `finalize()` function and made insert use push_back before sorting.  
-- `SortedLinkedListDict.cpp/.hpp` → added `finalize()` function, added `clear()` helper, fixed destructor so list is deleted safely, changed insert to push at head first then rebuild sorted list in finalize.  
-- `UnsortedLinkedListDict.cpp/.hpp` → wrote the full implementation of insert, lookup, and remove.  
-- `main.cpp` → added removal time.
-
-The data structures used are simple arrays (`std::vector`) and singly linked lists (with `Node` struct).  
-
 ---
 
 ## Testing & Status
